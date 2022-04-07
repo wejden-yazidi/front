@@ -1,0 +1,45 @@
+<form #it="ngForm" (ngSubmit)="ajouterJournall()">
+  <form>
+ <div class="flex-row justify-content-center p-2">
+    <div class="col-10 col-sm-10 col-md-6 col-lg-4 col-xl-4">
+      <div class="card" style="width: 900px; margin: 0 auto; padding: 1em; border: 1px solid; border-radius: 1em; ">
+        <div class="card-header text-center">
+          <h4> <span class="text-primary font-weight-bold" style="color: #c6dcef;">Ajouter un Journal </span></h4>
+        </div>
+        <div class="card-body">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Code">Code Journal :</label>
+                <input type="text" class="form-control" id="Code" placeholder="Code Journal" required [(ngModel)]="Journall.idTypeJournal" name="TypeJournal">
+              </div>
+          </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="Numero">Designation :</label>
+                <input type="text" class="form-control" id="Nom"  placeholder="Enter Designation"required [(ngModel)]="Journall.designation" name="designation">
+              </div>
+    
+              <div class="form-group col-md-6">
+                <label for="Date"> Date</label>
+                <input type="date" class="form-control" id="Date" value="Date"required [(ngModel)]="Journall.dateCreation" name="date">
+              </div>
+            </div>
+           <div class="form-row">
+              <div class="form-group col-md-5" >
+              <label for="Etat" >Statut :</label>
+               <select  class="form-control col-md-15" required [(ngModel)]="Journall.isActif" name="isActif" >
+                               <option selected > actif </option>
+                               <option  > non actif  </option>
+                           </select>
+                           </div>
+                </div>
+            <div class="form-row justify-content-center">
+              <button  type="submit"  onclick="ajouterJournall()" class="btn btn-primary mr-2">Create</button>
+              <button type="submit" onclick="annuler()" class="btn btn-primary">Delete</button>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+</form>
+</form>

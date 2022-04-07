@@ -4,7 +4,6 @@ import { NgModule } from "@angular/core";
 import { PagesComponent } from "./pages.component";
 import { ECommerceComponent } from "./e-commerce/e-commerce.component";
 import { NotFoundComponent } from "./miscellaneous/not-found/not-found.component";
-import { ListJournallComponent } from "./journall/list-journall/list-journall.component";
 
 const routes: Routes = [
   {
@@ -32,6 +31,11 @@ const routes: Routes = [
         path: "journall",
         loadChildren: () =>
           import("./journall/journall.module").then((m) => m.JournallModule),
+      },
+      {
+        path: "compte",
+        loadChildren: () =>
+          import("./compte/compte.module").then((m) => m.CompteModule),
       },
       {
         path: "charts",

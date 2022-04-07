@@ -1,38 +1,36 @@
-<!-- <p>list-journall works!</p>
-<table>
-    <tr>
-        <th>id</th>
-        <th>état</th>
-        <th>Type journal</th>
-    </tr>
-    <tbody>
-        <tr *ngFor="let j of listJournall ">
-          <td>{{j.id}}</td>
-          <td>{{j.etat}}</td>
-          <td>{{j.typeJournall}}</td> -->
-          <!-- <td><button (click)="deleteEmployee(employee.id)" class="btn btn-danger">Delete</button>
-              <button (click)="employeeDetails(employee.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
-          </td> -->
-        <!-- </tr>
-      </tbody>
-</table> -->
-<p-table [value]="listJournall" styleClass="p-datatable-striped" responsiveLayout="scroll">
-    
-    
+<!-- <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="list-journall.component.scss">
+      </head>
+      <body> -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <form>
+     <button (click)="ajouter()" class="btn btn-warning" style=" display: inline-block;
+     position: relative;
+top: 2px;
+ left:900px;"
+     
+       >Ajouter Journal</button>
+       <br></form>
+<p-table  class="table table-dark table-hover" [value]="listJournall"  styleClass="p-datatable-striped" responsiveLayout="scroll">
     <ng-template pTemplate="header"> 
-       
-        <tr>
-            <th>id</th>
-            <th>Type Journal</th>
-            <th>état</th>
+        <tr scope="row" >
+            <th>Designation</th>
+            <th>Code</th>
+            <th>Date de Création</th>
+            <th>Etat</th>
+            <th>Action</th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-journall> 
-        <tr>
-            <td>{{journall.id}}</td>
-            <td>{{journall.typeJournall}}</td>
+        <tr >
+            <td>{{journall.designation}}</td>
+            <td>{{journall.idTypeJournal}}</td>
+           <td>{{journall.date}}</td>
             <td> {{journall.isActif}}</td>
+            <td>
+                <button (click)="delete(journall.id)" class="btn btn-danger btn-rounded" >Delete</button>
+           <button (click)="update()" type="button" class="btn btn-primary btn-rounded">Update</button> </td>
         </tr>
     </ng-template>
 </p-table>
-

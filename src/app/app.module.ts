@@ -16,14 +16,11 @@ import {
   NbToastrModule,
   NbWindowModule,
 } from '@nebular/theme';
-
-
+import { TreeModule } from 'primeng/tree';
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    BrowserModule,
-
-
+    BrowserModule, TreeModule,
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,

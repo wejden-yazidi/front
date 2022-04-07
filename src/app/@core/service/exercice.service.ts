@@ -6,11 +6,11 @@ import { Exercice } from '../data/Exercice';
   providedIn: 'root'
 })
 export class ExerciceService {
-   urlGetAllJournal='http://localhost:8090/api/v1/getAllExercice';
-   urlGetOneAllJournal='http://localhost:8090/api/v1/getOneExercice/{id}';
-   urlCreateExercice='http://localhost:8090/api/v1/createExercice';
-   urlUpdateExercice='http://localhost:8090/api/v1/updateExercice/{id}';
-   urlDeleteExercice='http://localhost:8090/api/v1/deleteExercice/{id}';
+   urlGetAllJournal='http://localhost:8080/api/getAllExercice';
+   urlGetOneAllJournal='http://localhost:8080/api/getOneExercice';
+   urlCreateExercice='http://localhost:8080/api/createExercice';
+   urlUpdateExercice='http://localhost:8080/api/updateExercice';
+   urlDeleteExercice='http://localhost:8080/api/deleteExercice';
    constructor(private httpExercice:HttpClient) { }
 
    getAllExercice(){

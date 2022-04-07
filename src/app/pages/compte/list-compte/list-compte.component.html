@@ -1,0 +1,14 @@
+<!-- <div class="container">
+<p-tree [value]="docs"  [loading]="loading"></p-tree>
+</div> -->
+
+<!-- <p-tree [value]="files"></p-tree> -->
+<h5>Basic</h5>
+<p-tree [value]="files"></p-tree>
+
+<h5>Programmatic</h5>
+<div>
+    <button pButton type="button" label="Expand all" (click)="expandAll()" ></button>
+    <button pButton type="button" label="Collapse all" (click)="collapseAll()"></button>
+</div>
+<p-tree [value]="files2"></p-tree>

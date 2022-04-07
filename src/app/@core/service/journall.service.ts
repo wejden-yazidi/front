@@ -6,11 +6,11 @@ import { Journall } from '../data/Journall';
   providedIn: 'root'
 })
 export class JournallService {
-   urlGetAllJournal='http://localhost:8090/api/v1/getAllJournall';
-   urlGetOneAllJournal='http://localhost:8090/api/v1/getOneJournall/{id}';
-   urlCreateJournall='http://localhost:8090/api/v1/createJournall';
-   urlUpdateJournall='http://localhost:8090/api/v1/updateJournall/{id}';
-   urlDeleteJournall='http://localhost:8090/api/v1/deletejournall/{id}';
+   urlGetAllJournal='http://localhost:8080/api/getAllJournall';
+   urlGetOneAllJournal='http://localhost:8080/api/getOneJournall';
+   urlCreateJournall='http://localhost:8080/api/createJournall';
+   urlUpdateJournall='http://localhost:8080/api/updateJournall';
+   urlDeleteJournall='http://localhost:8080/api/deleteJournall';
    constructor(private httpJournall:HttpClient) { }
 
    getAllJournall(){
@@ -19,10 +19,10 @@ export class JournallService {
 create(journall : Journall) {
   return this.httpJournall.post(this.urlCreateJournall, journall);
 }
-update(id: any, data: any) {
-  return this.httpJournall.put(`${this.urlUpdateJournall}/${id}`, data);
+update(id: string, journall: Journall) {
+  return this.httpJournall.put(`${this.urlUpdateJournall}/${id}`, journall);
 }
-delete(id: any) {
+delete(id: string) {
   return this.httpJournall.delete(`${this.urlDeleteJournall}/${id}`);
 }
 

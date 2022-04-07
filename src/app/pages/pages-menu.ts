@@ -2,12 +2,25 @@ import { NbMenuItem } from "@nebular/theme";
 
 export const MENU_ITEMS: NbMenuItem[] = [
   {
-    title: "Exercice",
+    title: "Administration",
     icon: "clipboard",
     link: "/pages/dashboard",
     home: true,
+    children: [
+      {
+        title: "Plan Comptable",
+        icon: "map-outline",
+        link: "/pages/compte/compte",
+      },
+    
+      {
+        title: "Gestion des Journaux",
+        icon: "file-text-outline",
+        link:"/pages/journall/journall" ,  
+      },
+    ],
   },
-  {
+  /*{
     title: "Partenaire",
     icon: "people-outline",
     children: [
@@ -95,5 +108,5 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: "/auth/reset-password",
       },
     ],
-  },
+  },*/
 ];

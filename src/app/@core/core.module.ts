@@ -32,26 +32,26 @@ import { StatsProgressBarData } from './data/stats-progress-bar';
 import { VisitorsAnalyticsData } from './data/visitors-analytics';
 import { SecurityCamerasData } from './data/security-cameras';
 
-import { UserService } from './mock/users.service';
-import { ElectricityService } from './mock/electricity.service';
-import { SmartTableService } from './mock/smart-table.service';
-import { UserActivityService } from './mock/user-activity.service';
-import { OrdersChartService } from './mock/orders-chart.service';
-import { ProfitChartService } from './mock/profit-chart.service';
-import { TrafficListService } from './mock/traffic-list.service';
-import { EarningService } from './mock/earning.service';
-import { OrdersProfitChartService } from './mock/orders-profit-chart.service';
-import { TrafficBarService } from './mock/traffic-bar.service';
-import { ProfitBarAnimationChartService } from './mock/profit-bar-animation-chart.service';
-import { TemperatureHumidityService } from './mock/temperature-humidity.service';
-import { SolarService } from './mock/solar.service';
-import { TrafficChartService } from './mock/traffic-chart.service';
-import { StatsBarService } from './mock/stats-bar.service';
-import { CountryOrderService } from './mock/country-order.service';
-import { StatsProgressBarService } from './mock/stats-progress-bar.service';
-import { VisitorsAnalyticsService } from './mock/visitors-analytics.service';
-import { SecurityCamerasService } from './mock/security-cameras.service';
-import { MockDataModule } from './mock/mock-data.module';
+import { UserService } from './service/users.service';
+import { ElectricityService } from './service/electricity.service';
+import { SmartTableService } from './service/smart-table.service';
+import { UserActivityService } from './service/user-activity.service';
+import { OrdersChartService } from './service/orders-chart.service';
+import { ProfitChartService } from './service/profit-chart.service';
+import { TrafficListService } from './service/traffic-list.service';
+import { EarningService } from './service/earning.service';
+import { OrdersProfitChartService } from './service/orders-profit-chart.service';
+import { TrafficBarService } from './service/traffic-bar.service';
+import { ProfitBarAnimationChartService } from './service/profit-bar-animation-chart.service';
+import { TemperatureHumidityService } from './service/temperature-humidity.service';
+import { SolarService } from './service/solar.service';
+import { TrafficChartService } from './service/traffic-chart.service';
+import { StatsBarService } from './service/stats-bar.service';
+import { CountryOrderService } from './service/country-order.service';
+import { StatsProgressBarService } from './service/stats-progress-bar.service';
+import { VisitorsAnalyticsService } from './service/visitors-analytics.service';
+import { SecurityCamerasService } from './service/security-cameras.service';
+import { MockDataModule } from './service/mock-data.module';
 
 const socialLinks = [
   {

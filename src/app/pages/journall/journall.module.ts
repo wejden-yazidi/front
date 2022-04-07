@@ -1,16 +1,23 @@
 import { CommonModule } from '@angular/common';
 import {  NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { JournallRoutingModule } from './journall-routing.module';
 import { ListJournallComponent } from './list-journall/list-journall.component';
 import {TableModule} from 'primeng/table';
+import { AjouterJournallComponent } from './ajouter-journall/ajouter-journall.component';
+import { ToastModule } from "primeng/toast";
+import { HttpClientModule } from '@angular/common/http';
+import { ModifierJournallComponent } from './modifier-journall/modifier-journall.component';
+
 
 @NgModule({
   declarations: [
-    ListJournallComponent,  
+    ListJournallComponent,
+    AjouterJournallComponent,
+    ModifierJournallComponent,
   ],
-  imports: [JournallRoutingModule,
-  FormsModule,CommonModule,TableModule],
+  imports: [JournallRoutingModule,ReactiveFormsModule,
+  FormsModule,CommonModule,TableModule,ToastModule, HttpClientModule],
   providers:[]
 })
 export class JournallModule { }

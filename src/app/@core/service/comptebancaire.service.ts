@@ -6,10 +6,10 @@ import { CompteBancaire } from '../data/CompteBancaire';
   providedIn: 'root'
 })
 export class CompteBancaireService {
-   urlGetAllJournal='http://localhost:8090/api/v1/getAllCompteBancaire';
-   urlCreateCompteBancaire='http://localhost:8090/api/v1/createCompteBancaire';
-   urlUpdateCompteBancaire='http://localhost:8090/api/v1/updateCompteBancaire/{id}';
-   urlDeleteCompteBancaire='http://localhost:8090/api/v1/deleteCompteBancaire/{id}';
+   urlGetAllJournal='http://localhost:8080/api/getAllCompteBancaire';
+   urlCreateCompteBancaire='http://localhost:8080/api/createCompteBancaire';
+   urlUpdateCompteBancaire='http://localhost:8080/api/updateCompteBancaire';
+   urlDeleteCompteBancaire='http://localhost:8080/api/deleteCompteBancaire';
    constructor(private httpCompteBancaire:HttpClient) { }
 
    getAllCompteBancaire(){

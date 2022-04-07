@@ -1,0 +1,58 @@
+[
+    {
+        "id": "624ad90862bd2e3d4b096a61",
+        "idParent": "624ae1672d4e30004b2f3d10",
+        "numCompte": 0,
+        "isActif": null,
+        "dateCreation": null
+    },
+    {
+        "id": "624ad94762bd2e3d4b096a63",
+        "idParent": "624ae1672d4e30004b2f3d10",
+        "numCompte": 0,
+        "isActif": null,
+        "dateCreation": null
+    },
+    {
+        "id": "624ad94e62bd2e3d4b096a64",
+        "idParent": "624ae1672d4e30004b2f3d10",
+        "numCompte": 0,
+        "isActif": null,
+        "dateCreation": null
+    },
+    {
+        "id": "624ad95062bd2e3d4b096a65",
+        "idParent": "624ae1672d4e30004b2f3d10",
+        "numCompte": 0,
+        "isActif": null,
+        "dateCreation": null
+    },
+    {
+        "id": "624ad95162bd2e3d4b096a66",
+        "idParent": "624ae1672d4e30004b2f3d10",
+        "numCompte": 0,
+        "isActif": null,
+        "dateCreation": null
+    },
+    {
+        "id": "624ae15f2d4e30004b2f3d0e",
+        "idParent": "0",
+        "numCompte": 0,
+        "isActif": null,
+        "dateCreation": null
+    },
+    {
+        "id": "624ae1642d4e30004b2f3d0f",
+        "idParent": "0",
+        "numCompte": 0,
+        "isActif": null,
+        "dateCreation": null
+    },
+    {
+        "id": "624ae1672d4e30004b2f3d10",
+        "idParent": "0",
+        "numCompte": 0,
+        "isActif": null,
+        "dateCreation": null
+    }
+]

@@ -6,10 +6,10 @@ import { Devise } from '../data/Devise';
   providedIn: 'root'
 })
 export class DeviseService {
-   urlGetAllDevise='http://localhost:8090/api/v1/getAllDevise';
-   urlCreateDevise='http://localhost:8090/api/v1/createDevise';
-   urlUpdateDevise='http://localhost:8090/api/v1/updateDevise/{id}';
-   urlDeleteDevise='http://localhost:8090/api/v1/deleteDevise/{id}';
+   urlGetAllDevise='http://localhost:8080/api/getAllDevise';
+   urlCreateDevise='http://localhost:8080/api/createDevise';
+   urlUpdateDevise='http://localhost:8080/api/updateDevise';
+   urlDeleteDevise='http://localhost:8080/api/deleteDevise';
    constructor(private httpDevise:HttpClient) { }
 
    getAllDevise(){
