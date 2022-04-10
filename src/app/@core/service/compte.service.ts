@@ -16,9 +16,10 @@ export class CompteService {
    urlDeleteCompte='http://localhost:8080/api/deleteCompte';
    urlGetParents="http://localhost:8080/api/getParents";
    constructor(private httpCompte:HttpClient) {    this.getJSON().subscribe(data => {
-    console.log(data);
 }) }
-
+getAllCompte(){
+  return this.httpCompte.get<Compte[]>(this.urlGetAllCompte);
+}
 public loadNodes(id:String | undefined){
   if(!id){
     id='All'; 

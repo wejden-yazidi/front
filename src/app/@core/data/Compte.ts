@@ -4,4 +4,5 @@ export class Compte{
     idParent:string;
     numCompte:number;
     dateCreation:Date;
+    children:[];
 }

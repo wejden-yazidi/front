@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'ngx-ajouter-compte',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AjouterCompteComponent implements OnInit {
 
-  constructor() { }
+  constructor( private router:Router) { }
 
   ngOnInit(): void {
   }
-
+  annuler(){
+    this.router.navigate(["/pages/compte/compte"])
+  }
 }

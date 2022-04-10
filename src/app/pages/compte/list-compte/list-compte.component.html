@@ -1,14 +1,33 @@
-<!-- <div class="container">
-<p-tree [value]="docs"  [loading]="loading"></p-tree>
+<!-- <div *ngFor="let item of listeComptes">
+{{item.numCompte}}
+
+
 </div> -->
 
-<!-- <p-tree [value]="files"></p-tree> -->
-<h5>Basic</h5>
-<p-tree [value]="files"></p-tree>
+<button (click)="ajouter()" class="btn btn-warning" style=" display: inline-block;
+position: relative;
+top: 2px;
+left:900px;"
 
-<h5>Programmatic</h5>
-<div>
-    <button pButton type="button" label="Expand all" (click)="expandAll()" ></button>
+  >Ajouter Compte</button><br><br>
+
+  <!-- <div style="margin: bottom 1px;">
+    <button pButton type="button" label="Expand all" (click)="expandAll()" style="margin: right 5rem"></button>
     <button pButton type="button" label="Collapse all" (click)="collapseAll()"></button>
 </div>
-<p-tree [value]="files2"></p-tree>
+<p-tree [value]="ListParent"></p-tree> -->
+
+
+
+
+
+ 
+<p-tree [value]="ListParent"  >
+  <ng-template let-ListParent pTemplate="url">
+     <a [href]="ListParent.data">{{ListParent.label}}</a>
+  </ng-template>
+  <ng-template let-ListParent pTemplate="default" >
+      Compte : 
+      <b>{{ListParent.label}}</b>
+  </ng-template>
+</p-tree>
