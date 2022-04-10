@@ -9,23 +9,28 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CompteService {
-   urlGetAllCompte='http://localhost:8080/api/getAllCompte';
-   urlGetOneAllCompte='http://localhost:8080/api/getOneCompte';
-   urlCreateCompte='http://localhost:8080/api/createCompte';
-   urlUpdateCompte='http://localhost:8080/api/updateCompte';
-   urlDeleteCompte='http://localhost:8080/api/deleteCompte';
-   urlGetParents="http://localhost:8080/api/getParents";
-   constructor(private httpCompte:HttpClient) {    this.getJSON().subscribe(data => {
-}) }
+   urlGetAllCompte='api/getAllAcounts';
+   urlGetOneAllCompte='api/getOneCompte';
+   urlCreateCompte='api/createCompte';
+   urlUpdateCompte='api/updateCompte';
+   urlDeleteCompte='api/deleteCompte';
+   urlGetParents="api/getParents";
+   constructor(private httpCompte:HttpClient) {   
+ }
+
+
 getAllCompte(){
-  return this.httpCompte.get<Compte[]>(this.urlGetAllCompte);
+  return this.httpCompte.get<any>(this.urlGetAllCompte);
 }
-public loadNodes(id:String | undefined){
-  if(!id){
-    id='All'; 
-  }
-   return this.httpCompte.get<Compte[]>(this.urlGetAllCompte);
-  }
+
+
+
+// public loadNodes(id:String | undefined){
+//   if(!id){
+//     id='All'; 
+//   }
+//    return this.httpCompte.get<Compte[]>(this.urlGetAllCompte);
+//   }
 createCompte(compte: Compte) {
   return this.httpCompte.post(this.urlCreateCompte, compte);
 }
