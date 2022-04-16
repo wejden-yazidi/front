@@ -17,6 +17,7 @@ import {
   NbWindowModule,
 } from '@nebular/theme';
 import { TreeModule } from 'primeng/tree';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -35,6 +36,7 @@ import { TreeModule } from 'primeng/tree';
     }),
     CoreModule.forRoot(),
     ThemeModule.forRoot(),
+    NgbModule,
   ],
   bootstrap: [AppComponent],
 

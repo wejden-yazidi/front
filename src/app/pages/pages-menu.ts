@@ -18,95 +18,106 @@ export const MENU_ITEMS: NbMenuItem[] = [
         icon: "file-text-outline",
         link:"/pages/journall/journall" ,  
       },
-    ],
-  },
-  /*{
-    title: "Partenaire",
-    icon: "people-outline",
-    children: [
       {
-        title: "Form Layouts",
-        link: "/pages/forms/layouts",
+        title: "Gestion des Banques",
+        icon: "book-outline",
+        link:"/pages/banque/banque" ,  
+      },
+      {
+        title: "Gestion des Fournisseurs",
+        icon: "people-outline",
+        link:"/pages/fournisseur/fournisseur" ,  
       },
     ],
   },
   {
-    title: "journall",
-    icon: "file-text-outline",
-    link:"/pages/journall/journall" ,  
-  }
-  ,
-  {
-    title: "Compte Bancaire",
-    icon: "map-outline",
+    title: "Gestion des Opérations",
+    icon: "file-add-outline",
     children: [
       {
-        title: "Google Maps",
-        link: "/pages/maps/gmaps",
-      },
-      {
-        title: "Leaflet Maps",
-        link: "/pages/maps/leaflet",
-      },
-      {
-        title: "Bubble Maps",
-        link: "/pages/maps/bubble",
-      },
-      {
-        title: "Search Maps",
-        link: "/pages/maps/searchmap",
+        title: "Déclaration Des Factures",
+        icon: "edit-2-outline",
+        link: "/pages/facture/facture",
       },
     ],
   },
-  {
-    title: "Charts",
-    icon: "pie-chart-outline",
-    children: [
-      {
-        title: "Echarts",
-        link: "/pages/charts/echarts",
-      },
-      {
-        title: "Charts.js",
-        link: "/pages/charts/chartjs",
-      },
-      {
-        title: "D3",
-        link: "/pages/charts/d3",
-      },
-    ],
-  },
+  // {
+  //   title: "journall",
+  //   icon: "file-text-outline",
+  //   link:"/pages/journall/journall" ,  
+  // }
+  // ,
+  // {
+  //   title: "Compte Bancaire",
+  //   icon: "map-outline",
+  //   children: [
+  //     {
+  //       title: "Google Maps",
+  //       link: "/pages/maps/gmaps",
+  //     },
+  //     {
+  //       title: "Leaflet Maps",
+  //       link: "/pages/maps/leaflet",
+  //     },
+  //     {
+  //       title: "Bubble Maps",
+  //       link: "/pages/maps/bubble",
+  //     },
+  //     {
+  //       title: "Search Maps",
+  //       link: "/pages/maps/searchmap",
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "Charts",
+  //   icon: "pie-chart-outline",
+  //   children: [
+  //     {
+  //       title: "Echarts",
+  //       link: "/pages/charts/echarts",
+  //     },
+  //     {
+  //       title: "Charts.js",
+  //       link: "/pages/charts/chartjs",
+  //     },
+  //     {
+  //       title: "D3",
+  //       link: "/pages/charts/d3",
+  //     },
+  //   ],
+  // },
 
-  {
-    title: "Miscellaneous",
-    icon: "shuffle-2-outline",
-    children: [
-      {
-        title: "404",
-        link: "/pages/miscellaneous/404",
-      },
-    ],
-  },
-  {
-    title: "Auth",
-    icon: "lock-outline",
-    children: [
-      {
-        title: "Login",
-        link: "/auth/login",
-      },
-      {
-        title: "Register",
-        link: "/auth/register",
-      },
-      {
-        title: "Request Password",
-        link: "/auth/request-password",
-      },
-      {
-        title: "Reset Password",
-        link: "/auth/reset-password",
-      },
-    ],
-  },*/
+  // {
+  //   title: "Miscellaneous",
+  //   icon: "shuffle-2-outline",
+  //   children: [
+  //     {
+  //       title: "404",
+  //       link: "/pages/miscellaneous/404",
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "Auth",
+  //   icon: "lock-outline",
+  //   children: [
+  //     {
+  //       title: "Login",
+  //       link: "/auth/login",
+  //     },
+  //     {
+  //       title: "Register",
+  //       link: "/auth/register",
+  //     },
+  //     {
+  //       title: "Request Password",
+  //       link: "/auth/request-password",
+  //     },
+  //     {
+  //       title: "Reset Password",
+  //       link: "/auth/reset-password",
+  //     },
+  //   ],
+  // },
 ];

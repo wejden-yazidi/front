@@ -1,5 +1,5 @@
 import { Component, OnInit} from "@angular/core";
-import { ActivatedRoute, Router } from "@angular/router";
+import {  Router } from "@angular/router";
 import { Journall } from '../../../@core/data/Journall';
 import { JournallService } from '../../../@core/service/journall.service';
 
@@ -9,28 +9,57 @@ import { JournallService } from '../../../@core/service/journall.service';
   styleUrls: ['./ajouter-journall.component.scss'],providers:[]
 })
 export class AjouterJournallComponent implements OnInit {
-  Journall:Journall;
-  submitted = false;
+  Journall:Journall= new Journall();
+  // Journall :Journall= {
+  //   id:'',
+  //   isActif:false,
+  //   designation:'',
+  //   idTypeJournal:'',
+  //   dateCreation:new Date(Date.now())
+  
+  // };
+  // submitted = false;
+  
   constructor(private journallService:JournallService,private router:Router) {}
 
   ngOnInit():void{}
-  
-   ajouterJournall():void {
-    this.Journall = new Journall();
-    // this.journall.id = this.route.snapshot.params['id'];
-    this.journallService.create(this.Journall).subscribe(
-      response => {
-        console.log(response);
-        this.submitted = true;
-      },
-      error => {
-        console.log(error);
-      });
-}
-annuler(){
-  this.router.navigate(["/pages/journall/journall"])
+  saveJournall(){
+  this.journallService.create(this.Journall).subscribe( data =>{
+    console.log(data);
+    this.goToJournallList();
+  },
+  error => console.log(error));
 }
 
+goToJournallList(){
+  this.router.navigate(['/pages/journall/journall']);
 }
 
+onSubmit(){
+  console.log(this.Journall);
+  this.saveJournall();
+}
+}
 
+//    ajouterJournall():void {
+//     const journall = {
+//        id: this.Journall.id,
+//        designation: this.Journall. designation,
+//        idTypeJournal: this.Journall. idTypeJournal,
+//        dateCreation: this.Journall. dateCreation
+
+//     };
+//     this.journallService.create(this.Journall)
+//     .subscribe({
+//       next: (res) => {
+//         console.log(res);
+//         this.submitted = true;
+//       },
+//       error: (e) => console.error(e)
+//     });
+// }
+// annuler(){
+//   this.router.navigate(["/pages/journall/journall"])
+// }
+
+// }
