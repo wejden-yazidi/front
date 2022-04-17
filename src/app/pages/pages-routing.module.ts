@@ -37,11 +37,11 @@ const routes: Routes = [
         loadChildren: () =>
           import("./compte/compte.module").then((m) => m.CompteModule),
       },
-      // {
-      //   path: "facture",
-      //   loadChildren: () =>
-      //     import("./facture/facture.module").then((m) => m.FactureModule),
-      // },
+      {
+        path: "facture",
+        loadChildren: () =>
+          import("./facture/facture.module").then((m) => m.FactureModule),
+      },
 
       {
         path: "miscellaneous",

@@ -24,5 +24,4 @@ updateCompteBancaire(id: string, data: any) {
 deleteCompteBancaire(id: string) {
   return this.httpCompteBancaire.delete(`${this.urlDeleteCompteBancaire}/${id}`);
 }
-
   }
