@@ -1,0 +1,107 @@
+form input {
+    width: 300px;
+    height: 40px;
+    border: 1px solid #030105;
+    border-radius: 4px;
+    font-size: 18px;
+    padding: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    // padding: 10px;
+    background-color: #fff;
+    // border: 1px solid rgb(227, 245, 248);
+    margin-bottom: 23px;
+  
+    box-shadow: grey;
+  }
+  
+  .form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  
+  @media (max-width: 800px) {
+    .form-inline input {
+      margin: 10px 0;
+    }
+  
+    .form-inline {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+  
+  // #googlemap {
+  //   height: 100%;
+  //   width: 100%;
+  // }
+  
+  .btn-xl {
+    width: 50px;
+    height: 50px;
+    padding: 50px 25 px 10px;
+    line-height: 0;
+    border-radius: 50%;
+    background-color: #1c74e6;
+    text-align: center;
+    font-size: 14px;
+    border-width: 2px;
+    border-color: #00abe2;
+    display: inline-block;
+    text-shadow: 2px 2 px #000000;
+    color: #fff;
+  }
+  
+  .horizontal {
+    display: inline-block;
+    width: 250px;
+    border-color: 2px #000000;
+  }
+  
+  .my-right {
+    text-align: right;
+    width: 100%;
+  }
+  
+  .test {
+    display: inline-block;
+    width: 500px;
+    margin: 30px;
+    height: 50px;
+  }
+  
+  
+  input ,label {
+    display: block;
+    width: auto;
+  
+  }
+  // #ngIf{
+  //   font-size: 12px;
+  
+  // }
+  .suivant {
+    color: #fff;
+  
+  }
+  .info {
+    display: inline-block;
+          background-color: #3682e6;
+          border-radius: 10px;
+          border: 4px double #fdfdfd;
+          color: #ffffff;
+          text-align: center;
+          font-size: 20px;
+          padding: 10px;
+          width: 150px;
+          transition: all 0.5s;
+          cursor: pointer;
+          margin: 2px;
+  }
+  .horizontalInfo {
+    display: inline-block;
+    width: 130px;
+    border-color: 2px #000000;
+  }  

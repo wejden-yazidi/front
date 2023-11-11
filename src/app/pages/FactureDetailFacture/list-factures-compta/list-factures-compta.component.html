@@ -1,0 +1,119 @@
+<nb-card>
+    <nb-card-header>
+      <div>
+        <div class="col-md-6">
+          <span style="font-size: 25px;"> Gestion des Factures </span>
+        </div>
+      </div>
+    </nb-card-header>
+    <nb-card-body>
+      <p-toast></p-toast>
+      <p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+      <p-dialog
+        header="Détail Facture"
+        [(visible)]="display"
+        [style]="{ width: '50vw' }"
+      >
+        <table class="table">
+          <thead>
+            <th>Désignation</th>
+            <th>Prix</th>
+            <th>Quantité</th>
+            <th>Remise</th>
+            <th>Tva</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let d of res">
+              <td>{{d.designation}}</td>
+              <td>{{d.prix}}</td>
+              <td>{{d.quantite}}</td>
+              <td>{{d.remise}}</td>
+              <td>{{d.tva}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </p-dialog>
+      <p-table
+        #dt
+        [value]="facturesCompta"
+        [rows]="5"
+        [rowsPerPageOptions]="[5, 10]"
+        [(first)]="first"
+        (sortFunction)="customSort($event)"
+      >
+        <ng-template pTemplate="caption">
+          <h6>Table des Factures</h6>
+          <div class="my-right">
+            <button
+              style="margin-bottom: 20px;"
+              pButton
+              label="Ajouter nouveau facture"
+              class="p-button-info"
+              id="btn-add"
+              icon="pi pi-edit "
+              (click)="ajouter()"
+            ></button>
+            <br />
+            <span class="p-input-icon-left ml-auto">
+              <input style="height: 40px;" pInputText type="text" />
+            </span>
+            <br />
+            <br />
+          </div>
+        </ng-template>
+  
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Numero facture</th>
+            <th>Client</th>
+            <th>Date facture</th>
+            <th>Observation</th>
+            <th>Adresse</th>
+            <th>montant</th>
+            <th>Actions</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-facture>
+          <tr>
+            <td style="font-weight: bold;">  <a [routerLink]="['/pages/facture/list-details/'+facture.id]"  >{{facture.number}}</a>  </td>
+            <td>{{ facture.client }}</td>
+            <td>{{ facture.dateCreation | date: "dd/MM/yyyy" }}</td>
+            <td>{{ facture.observation }}</td>
+            <td>{{ facture.adresse }}</td>
+            <td>{{ facture.montant }}</td>
+            <td>
+              <button
+                pButton
+                icon="pi pi-trash"
+                class="btn btn-danger"
+                (click)="supprimer(facture.id)"
+                style="margin-right: 10px;"
+              ></button>
+              <button
+                pButton
+                icon="pi pi-pencil"
+                style="margin-right: 10px;"
+                class="btn btn-success"
+                (click)="modifier(facture.id)"
+              ></button>
+              <button
+                title="Afiicher details"
+                pButton
+                icon="pi pi-eye
+                  "
+                class="btn btn-warning"
+                (click)="afficherDetailsFacture(facture.id)"
+              ></button>
+            </td>
+          </tr>
+        </ng-template>
+  
+        <ng-template pTemplate="summary">
+          <div style="font-weight: bold;" class="my-right">
+            {{ facturesCompta?.length }} factures(s)
+          </div>
+        </ng-template>
+      </p-table>
+    </nb-card-body>
+  </nb-card>
+  

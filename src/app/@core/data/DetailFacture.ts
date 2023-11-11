@@ -6,6 +6,7 @@ export class DetailFacture{
      Tva:number;
      quantite:number;
      designation:string;
+  tva: any;
 }
 
 

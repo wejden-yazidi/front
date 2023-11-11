@@ -37,7 +37,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: "Déclaration Des Factures",
         icon: "edit-2-outline",
-        link: "/pages/facture/facture",
+        link: "/pages/facture/list-facture-compta",
       },
     ],
   },

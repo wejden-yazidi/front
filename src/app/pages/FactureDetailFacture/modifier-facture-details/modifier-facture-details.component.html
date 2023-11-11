@@ -1,0 +1,185 @@
+<nb-card>
+    <nb-card-header>
+      <h4>Gestion des factures</h4>
+    </nb-card-header>
+    <p-toast></p-toast>
+    <nb-card-body>
+    
+      <form [formGroup]="factureForm">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label class="label"
+                >Client<span style="color: red;">*</span></label
+              >
+              <input
+                nbInput
+                fullWidth
+                type="text"
+                name="client"
+                formControlName="client"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid': submitted && factureForm.get('client').errors
+                }"
+              />
+              <div
+                id="ngIf"
+                *ngIf="submitted && factureForm.get('client').errors"
+                class="invalid-feedback"
+              >
+                <div *ngIf="factureForm.get('client').errors.required">
+                  Client  est obligatoire !
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label class="label"
+                >Numéro de facture<span style="color: red;">*</span></label
+              >
+              <input
+              readOnly
+                nbInput
+                fullWidth
+                type="text"
+                name="numFacture"
+                formControlName="numFacture"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid': submitted && factureForm.get('numFacture').errors
+                }"
+              />
+              <div
+                id="ngIf"
+                *ngIf="submitted && factureForm.get('numFacture').errors"
+                class="invalid-feedback"
+              >
+                <div *ngIf="factureForm.get('numFacture').errors.required">
+                  Numero de facture est obligatoire !
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label class="label">
+                Date de facture<span style="color: red;">*</span></label
+              >
+              <input
+                nbInput
+                name="dateCreation"
+                fullWidth
+                type="date"
+                formControlName="dateCreation"
+                value="{{ f.dateCreation | date: 'yyyy-MM-dd' }}"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid':
+                    submitted && factureForm.get('dateCreation').errors
+                }"
+              />
+              <div
+                id="ngIf"
+                *ngIf="submitted && factureForm.get('dateCreation').errors"
+                class="invalid-feedback"
+              >
+                <div *ngIf="factureForm.get('dateCreation').errors.required">
+                  Date création est obligatoire !
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label class="label">
+                Observation <span style="color: red;">*</span></label
+              >
+              <input
+                nbInput
+                fullWidth
+                type="text"
+                formControlName="observation"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid': submitted && factureForm.get('observation').errors
+                }"
+              />
+              <div
+                id="ngIf"
+                *ngIf="submitted && factureForm.get('observation').errors"
+                class="invalid-feedback"
+              >
+                <div *ngIf="factureForm.get('observation').errors.required">
+                  Date création est obligatoire !
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label class="label">
+                adresse <span style="color: red;">*</span></label
+              >
+              <input
+                nbInput
+                fullWidth
+                type="text"
+                formControlName="adresse"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid': submitted && factureForm.get('adresse').errors
+                }"
+              />
+              <div
+                id="ngIf"
+                *ngIf="submitted && factureForm.get('adresse').errors"
+                class="invalid-feedback"
+              >
+                <div *ngIf="factureForm.get('adresse').errors.required">
+                  Date création est obligatoire !
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+  
+      <br />
+  
+      <br />
+  
+  
+      <button
+        nbButton
+        style="
+          float: right;
+          border-color: white;
+          margin-top: 15px;
+          background: #79008e;
+        "
+        type="submit"
+        status="success"
+        class="btn btn-primary mx-2"
+        (click)="submit()"
+      >
+        ENREGISTRER
+      </button>
+      <button
+        nbButton
+        style="float: left; border-color: white; margin-top: 15px;"
+        type="submit"
+        status="danger"
+        class="btn btn-danger mx-2"
+        (click)="annuler()"
+      >
+        Annuler
+      </button>
+    </nb-card-body>
+  </nb-card>
+  

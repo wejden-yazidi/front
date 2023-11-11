@@ -1,0 +1,101 @@
+<form (ngSubmit)="onSubmit()" #myForm="ngForm">
+
+  <div class="flex-row justify-content-center p-2">
+    <div class="col-10 col-sm-10 col-md-6 col-lg-4 col-xl-4">
+      <div class="card" style="width: 900px; margin: 0 auto; padding: 1em; border: 1px solid; border-radius: 1em; ">
+        <div class="card-header text-center">
+          <h4> <span class="text-primary font-weight-bold" style="color: #c6dcef;">Ajouter un CompteBancaire </span>
+          </h4>
+        </div>
+        <div class="card-body">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="Code">num Compte Bancaire :</label>
+              <input type="text" class="form-control" id="numCompte" placeholder="num Compte Bancaire"
+                [(ngModel)]="CompteBancaire.numCompte" name="numCompte" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="Code">Code Compte Bancaire :</label>
+              <input type="text" class="form-control" id="code" placeholder="Code Compte Bancaire"
+                [(ngModel)]="CompteBancaire.code" name="code" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="Numero">id Fournisseur :</label>
+              <input type="text" class="form-control" id="idFournisseur" placeholder="Enter idFournisseur"
+                [(ngModel)]="CompteBancaire.idFournisseur" name="idFournisseur" required>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="Numero">nom Fournisseur :</label>
+              <input type="text" class="form-control" id="nomFournisseur" placeholder="Enter nom Fournisseur"
+                [(ngModel)]="CompteBancaire.nomFournisseur" name="nomFournisseur" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-5">
+              <label for="Etat">Statut :</label>
+              <select class="form-control col-md-15" id="isActif" [(ngModel)]="CompteBancaire.isActif" name="isActif"
+                required>
+                <option [value]="true" selected> actif </option>
+                <option [value]="false"> non actif </option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row justify-content-center">
+
+            <button type="submit" class="btn btn-primary mr-2" [disabled]="!myForm.form.valid">Sauvegarder</button>
+            <button type="button" (click)="goToCompteBancaireList()" class="btn btn-primary">Annuler</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+<!-- <div class="row">
+  <div class="card col-md-6 offset-md-3 offset-md-3">
+      <div class="row">
+          <h3 class="text-center"> Ajouter CompteBancaire </h3>
+          <hr />
+          <div class="card-body">
+              <form (ngSubmit)="onSubmit()">
+
+                  <div class="form-group">
+                      <label> code </label>
+                      <input type="text" class="form-control"  id="idTypeCompteBancaire" placeholder="Code CompteBancaire"  
+                      [(ngModel)]="CompteBancaire.idTypeCompteBancaire" name="idTypeCompteBancaire">
+                  </div>
+
+                  <div class="form-group">
+                      <label> Designation</label>
+                      <input type="text" class="form-control" id="designation"  placeholder="Enter Designation" 
+                      [(ngModel)]="CompteBancaire.designation" name="designation">
+                  </div>
+
+                  <div class="form-group">
+                      <label> Email Id</label>
+                      <input type="datetime-local" class="form-control" id="date" value="date" 
+                      [(ngModel)]="CompteBancaire.dateCreation" name="date">
+                  </div>
+                  <div class="form-group col-md-5" >
+                    <label for="Etat" >Statut :</label>
+                     <select  class="form-control col-md-15"  [(ngModel)]="CompteBancaire.isActif" name="isActif" >
+                                     <option selected > actif </option>
+                                     <option  > non actif  </option>
+                                 </select>
+                                 </div>
+                     
+                  <br />
+                  <button class="btn btn-success" type="submit">Submit</button>
+
+              </form>
+          </div>
+      </div>
+  </div>
+</div> -->

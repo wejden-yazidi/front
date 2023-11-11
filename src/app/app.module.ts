@@ -18,12 +18,28 @@ import {
 } from '@nebular/theme';
 import { TreeModule } from 'primeng/tree';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BoardAdminComponent } from './pages/board-admin/board-admin.component';
+import { BoardModeratorComponent } from './pages/board-moderator/board-moderator.component';
+import { BoardUserComponent } from './pages/board-user/board-user.component';
+import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { FormsModule } from '@angular/forms';
+import { authInterceptorProviders } from '../_helpers/auth.interceptor';
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,
+    LoginComponent,
+    RegisterComponent,
+    HomeComponent,
+    ProfileComponent,
+    BoardAdminComponent,
+    BoardModeratorComponent,
+    BoardUserComponent],
   imports: [
     BrowserModule, TreeModule,
     BrowserAnimationsModule,
-    HttpClientModule,
+    HttpClientModule, FormsModule,
     AppRoutingModule,
     NbSidebarModule.forRoot(),
     NbMenuModule.forRoot(),
@@ -38,6 +54,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ThemeModule.forRoot(),
     NgbModule,
   ],
+   providers: [authInterceptorProviders],
   bootstrap: [AppComponent],
 
 })

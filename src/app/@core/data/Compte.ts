@@ -1,8 +1,8 @@
-export class Compte{
-    id:string;
-    isActif:boolean;
-    idParent:string;
-    numCompte:number;
-    dateCreation:Date;
-    children:[];
+export class Compte {
+  id: string;
+  isActif: boolean = true;
+  idParent: string = "0";
+  numCompte: number;
+  dateCreation: Date;
+  children: [];
 }

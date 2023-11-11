@@ -23,12 +23,6 @@ import { DropdownModule } from 'primeng/dropdown';
 import {  InputTextModule } from 'primeng/inputtext';
 import { DialogModule } from 'primeng/dialog';
 import {MenubarModule} from 'primeng/menubar';
-// import { ConfirmationService, MessageService } from 'primeng/api';
-import {ToastModule} from 'primeng/toast';
-import { ConfirmationService, MessageService } from 'primeng/api';
-
-// import { BreadcrumbModule } from 'primeng/breadcrumb';
-
 import {PanelMenuModule} from 'primeng/panelmenu';
 
 
@@ -53,7 +47,6 @@ import {PanelMenuModule} from 'primeng/panelmenu';
     NbProgressBarModule,
     DialogModule,
     MenubarModule,
-    ToastModule,
     ngFormsModule,
     PanelMenuModule,
 
@@ -75,11 +68,6 @@ import {PanelMenuModule} from 'primeng/panelmenu';
 
   ],
 
-  providers:[
-MessageService,
-ConfirmationService,
-
-
-  ]
+  providers:[]
 })
 export class FormsModule { }

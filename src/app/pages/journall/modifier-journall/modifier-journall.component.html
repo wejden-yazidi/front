@@ -1,47 +1,49 @@
-<form (ngSubmit)="onSubmit()" >
-  
-    <div class="flex-row justify-content-center p-2">
-       <div class="col-10 col-sm-10 col-md-6 col-lg-4 col-xl-4">
-         <div class="card" style="width: 900px; margin: 0 auto; padding: 1em; border: 1px solid; border-radius: 1em; ">
-           <div class="card-header text-center">
-             <h4> <span class="text-primary font-weight-bold" style="color: #c6dcef;">Modifier  Journal </span></h4>
-           </div>
-           <div class="card-body">
-             <div class="form-row">
-               <div class="form-group col-md-6">
-                   <label for="Code">Code Journal :</label>
-                   <input type="text" class="form-control" id="idTypeJournal" placeholder="Code Journal"  [(ngModel)]="Journall.idTypeJournal" name="idTypeJournal">
-                 </div>
-             </div>
-               <div class="form-row">
-                 <div class="form-group col-md-6">
-                   <label for="Numero">Designation :</label>
-                   <input type="text" class="form-control" id="designation"  placeholder="Enter Designation" [(ngModel)]="Journall.designation" name="designation">
-                 </div>
-       
-                 <div class="form-group col-md-6">
-                   <label for="Date"> Date</label>
-                   <input type="datetime-local" class="form-control" id="date" value="date" [(ngModel)]="Journall.dateCreation" name="date">
-                 </div>
-               </div>
-              <div class="form-row">
-                 <div class="form-group col-md-5" >
-                 <label for="Etat" >Statut :</label>
-                  <select  class="form-control col-md-15" id="isActif" required ="Journall.isActif" name="isActif" >
-                                  <option selected > actif </option>
-                                  <option  > non actif  </option>
-                              </select>
-                              </div>
-                   </div>
-               <div class="form-row justify-content-center">
-                
-                 <button  type="submit"   class="btn btn-primary mr-2">Modifier</button>
-                 <button type="button" onclick="annuler()" class="btn btn-primary">Delete</button>
-             
-             </div>
-           </div>
-         </div>
-       </div>
-   </div>
-   </form>
-   
+<form (ngSubmit)="onSubmit()" #myForm="ngForm">
+
+  <div class="flex-row justify-content-center p-2">
+    <div class="col-10 col-sm-10 col-md-6 col-lg-4 col-xl-4">
+      <div class="card" style="width: 900px; margin: 0 auto; padding: 1em; border: 1px solid; border-radius: 1em; ">
+        <div class="card-header text-center">
+          <h4> <span class="text-primary font-weight-bold" style="color: #c6dcef;">Modifier Journal </span></h4>
+        </div>
+        <div class="card-body">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="Code">Code Journal :</label>
+              <input type="text" class="form-control" id="idTypeJournal" placeholder="Code Journal"
+                [(ngModel)]="Journall.idTypeJournal" name="idTypeJournal">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="Numero">Designation :</label>
+              <input type="text" class="form-control" id="designation" placeholder="Enter Designation"
+                [(ngModel)]="Journall.designation" name="designation">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="Date"> Date</label>
+              <input type="datetime-local" class="form-control" id="date" value="date"
+                [(ngModel)]="Journall.dateCreation" name="date">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-5">
+              <label for="Etat">Statut :</label>
+              <select class="form-control col-md-15" id="isActif" [(ngModel)]="Journall.isActif" name="isActif">
+                <option [value]="true" selected> actif </option>
+                <option [value]="false"> non actif </option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row justify-content-center">
+
+            <button type="submit" class="btn btn-primary mr-2" [disabled]="!myForm.form.valid">Modifier</button>
+            <button type="button" (click)="deleteJournal()" class="btn btn-danger">Delete</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,60 @@
+<form (ngSubmit)="onSubmit()" #myForm="ngForm">
+
+  <div class="flex-row justify-content-center p-2">
+    <div class="col-10 col-sm-10 col-md-6 col-lg-4 col-xl-4">
+      <div class="card" style="width: 900px; margin: 0 auto; padding: 1em; border: 1px solid; border-radius: 1em; ">
+        <div class="card-header text-center">
+          <h4> <span class="text-primary font-weight-bold" style="color: #c6dcef;">Ajouter un Fournisseur </span></h4>
+        </div>
+        <div class="card-body">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="Code">nom Fournisseur :</label>
+              <input type="text" class="form-control" id="nom" placeholder="nom Fournisseur"
+                [(ngModel)]="Fournisseur.nom" name="nom" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="Code">prenom Fournisseur :</label>
+              <input type="text" class="form-control" id="prenom" placeholder="prenom Fournisseur"
+                [(ngModel)]="Fournisseur.prenom" name="prenom" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="Code">email Fournisseur :</label>
+              <input type="email" class="form-control" id="email" placeholder="email Fournisseur"
+                [(ngModel)]="Fournisseur.email" name="email" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="Code">tel Fournisseur :</label>
+              <input type="text" class="form-control" id="tel" placeholder="tel Fournisseur"
+                [(ngModel)]="Fournisseur.tel" name="tel" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="Code">societe Fournisseur :</label>
+              <input type="text" class="form-control" id="societe" placeholder="societe Fournisseur"
+                [(ngModel)]="Fournisseur.societe" name="societe" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="Date"> Date</label>
+              <input type="datetime-local" class="form-control" id="date" value="date"
+                [(ngModel)]="Fournisseur.dateCreation" name="date" required>
+            </div>
+          </div>
+
+
+
+          <div class="form-row justify-content-center">
+
+            <button type="submit" class="btn btn-primary mr-2" [disabled]="!myForm.form.valid">Sauvegarder</button>
+            <button type="button" (click)="goToFournisseurList()" class="btn btn-primary">Annuler</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

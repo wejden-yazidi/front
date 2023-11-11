@@ -38,9 +38,21 @@ const routes: Routes = [
           import("./compte/compte.module").then((m) => m.CompteModule),
       },
       {
+        path: "banque",
+        loadChildren: () =>
+          import("./banque/banque.module").then((m) => m.CompteBancaireModule),
+      },
+      {
+        path: "fournisseur",
+        loadChildren: () =>
+          import("./fournisseur/fournisseur.module").then(
+            (m) => m.FournisseurModule
+          ),
+      },
+      {
         path: "facture",
         loadChildren: () =>
-          import("./facture/facture.module").then((m) => m.FactureModule),
+          import("./FactureDetailFacture/FactureDetailsFacture.module").then((m) => m.FactureDetailsFactureModule),
       },
 
       {
